@@ -1,4 +1,4 @@
-test-rau
+test-tau
 ==========
 Test task, 'tau' codename
 
