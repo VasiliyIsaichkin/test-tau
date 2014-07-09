@@ -1,0 +1,32 @@
+{
+	"name"         : "isaichkin.ru-test-tau",
+	"version"      : "0.0.2",
+	"description"  : "Test task, 'tau' codename",
+	"author"       : "Vasiliy Isaichkin <vasiliy@isaichkin.ru>",
+	"license"      : "MIT",
+	"homepage"     : "http://sigma.test.isaichkin.ru",
+	"private"      : true,
+	"scripts"      : {
+		"start" : "node ./app.js"
+	},
+	"repository"   : {
+		"type" : "git",
+		"url"  : "https://github.com/VasiliyIsaichkin/test-tau"
+	},
+	"dependencies" : {
+		"express"   : "4.5",
+		"xml2json"  : "*",
+		"nconf"     : "*",
+		"jade"      : "*",
+		"socket.io" : "*",
+		"libxmljs"  : "*",
+		"cheerio"   : "*",
+		"iconv"     : "*"
+	},
+	"IRIX"         : {
+		"build"      : false,
+		"force"      : true,
+		"native"     : true,
+		"repository" : "2VoVOpI7gpN7YTjCAMqgWCSDudznsGig"
+	}
+}

@@ -1,0 +1,50 @@
+extends layout
+
+block content
+    .container(ng-controller="mainCtl")
+        .row
+            .col-lg-12
+                h3 Отображение рейтинга фильма по его ID
+        .row
+            form
+                .col-md-4.form-group(ng-class="{'has-error':validate_error}")
+                    .right-inner-addon
+                        fa.fa-spin.fadein.fadeout(name="refresh" ng-show="inProgress")
+                        input(type="text" class="form-control" ng-model="request" ng-enter="onRatingRequest()" placeholder="Введите ID фильма")
+                .col-md-1
+                    .btn.btn-info(ng-click='onRatingRequest()' ng-disabled="inProgress") Запросить
+        .row
+            .col-md-6
+                .panel.panel-info(ng-hide="error||!kp_vote")
+                    .panel-heading
+                        h3.panel-title Информация о рейтинге
+                    .panel-body
+                        .left-inner-addon
+                            div(ng-hide="filmname")
+                                span.text-muted ... загрузка назавния фильма
+                            div
+                                span(ng-bind="filmname" ng-show="filmname")
+                    table.table
+                        thead
+                            tr
+                                th Наиминование сервиса
+                                th Количество голосов
+                                th Рейтинг
+                        tbody
+                            tr
+                                td IMDB
+                                td
+                                    span(ng-bind="imdb_vote")
+                                td
+                                    span(ng-bind="imdb_rate")
+                            tr
+                                td Кинопоиск
+                                td
+                                    span(ng-bind="kp_vote")
+                                td
+                                    span(ng-bind="kp_rate")
+                .panel.panel-danger(ng-show="error")
+                    .panel-heading
+                        h3.panel-title Ошибка
+                    .panel-body
+                        .text-danger(ng-bind="error")

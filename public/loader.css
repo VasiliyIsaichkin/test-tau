@@ -1,0 +1,81 @@
+body {
+	margin: 0;
+}
+
+.spinner {
+	background-color: #2c3e50 !important;
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	top: 0;
+	left: 0;
+}
+
+.application {
+	background-color: #fff !important;
+	width: 100%;
+	height: 100%;
+}
+
+.spinner-sign {
+	width: 60px;
+	height: 60px;
+	background-color: #eee;
+	margin: 100px auto;
+	-webkit-animation: radrotateplane 1.2s infinite ease-in-out;
+	box-shadow: 0 0 1px transparent;
+	animation: radrotateplane 1.2s infinite ease-in-out;
+	position: fixed;
+	top: 50%;
+	left: 50%;
+	margin-top: -50px;
+	margin-left: -30px;
+}
+
+.spinner-text {
+	position: fixed;
+	color: #eee;
+	font-size: 16px;
+	font-family: "Lucida Grande", "Helvetica Neue", Helvetica, Arial, sans-serif;
+	text-align: center;
+	vertical-align: middle;
+	top: 50%;
+	width: 100%;
+	margin-top: 30px;
+	line-height: 1.42857143;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+	display: block;
+}
+
+.spinner-hidden {
+	display: none;
+}
+
+@-webkit-keyframes radrotateplane {
+	0% {
+		-webkit-transform: perspective(120px)
+	}
+	50% {
+		-webkit-transform: perspective(120px) rotateY(180deg)
+	}
+	100% {
+		-webkit-transform: perspective(120px) rotateY(180deg) rotateX(180deg)
+	}
+}
+
+@keyframes radrotateplane {
+	0% {
+		transform: perspective(120px) rotateX(0deg) rotateY(0deg);
+		-webkit-transform: perspective(120px) rotateX(0deg) rotateY(0deg);
+	}
+	50% {
+		transform: perspective(120px) rotateX(-180.1deg) rotateY(0deg);
+		-webkit-transform: perspective(120px) rotateX(-180.1deg) rotateY(0deg);
+	}
+	100% {
+		transform: perspective(120px) rotateX(-180deg) rotateY(-179.9deg);
+		-webkit-transform: perspective(120px) rotateX(-180deg) rotateY(-179.9deg);
+	}
+}

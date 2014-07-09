@@ -1,0 +1,14 @@
+doctype html
+html
+    head
+        title='TAU test task'
+        link(rel='stylesheet', href='/css/loader.css')
+        script(src='/vendor/yepnope/yepnope.1.5.4-min.js')
+        script(src='/js/loader.js')
+    body
+        .spinner
+            .spinner-text.
+               Загрузка
+            .spinner-sign
+        .application.spinner-hidden
+            block content
